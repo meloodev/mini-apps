@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const min = 1;
     const max = 20;
-
     let limit = 20;
 
 
@@ -25,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.game__range .min').textContent = min;
     document.querySelector('.game__range .max').textContent = max;
     score.textContent = limit;
+
+    inp.min = min;
+    inp.max = max;
+
 
 
     function high() {
@@ -81,9 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.floor(Math.random() * max) + min;
     }
 
+    inp.addEventListener('input', () => {
+        inp.value = inp.value.replace(/[^0-9]/g, '');
+    });
+
     gameCheckBtn.addEventListener('click', () => {
         const gameInput = inp.value;
-        if (!isNaN(gameInput) && gameInput.trim() !== '' && limit > 0 && gameStatus) {
+        if (!isNaN(gameInput) && gameStatus && gameInput >= min && gameInput <= max && gameInput[0] !== '0') {
 
             if (+gameInput !== mainNum) {
                 score.textContent = --limit;
