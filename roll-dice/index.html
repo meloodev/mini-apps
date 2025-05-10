@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Roll Dice</title>
+</head>
+
+<body>
+
+    <div class="dice">
+        <div class="container">
+            <div class="dice__items">
+                <div class="dice__item one">
+                    <div class="dice__item-score">
+                        <h2>Player 1</h2>
+                        <span class="player__score">0</span>
+                    </div>
+                    <h2 class="winner">YOU WIN!!!</h2>
+                    <div class="current__score">
+                        <h4>current</h4>
+                        <span class="active__score">0</span>
+                    </div>
+                </div>
+                <div class="dice__item two">
+                    <div class="dice__item-score">
+                        <h2>Player 2</h2>
+                        <span class="player__score">0</span>
+                    </div>
+                    <h2 class="winner">YOU WIN!!!</h2>
+                    <div class="current__score">
+                        <h4>current</h4>
+                        <span class="active__score">0</span>
+                    </div>
+                </div>
+
+                <div class="dice__btns">
+                    <button class="dice__new">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <span>new game</span>
+                    </button>
+                    <div class="dice__result">
+                       <i class="fa-solid"></i>
+                    </div>
+                    <div class="dice__actions">
+                        <button class="dice__roll">
+                            <img src="./img/dice.svg" alt="roll">
+                            <span>roll dice</span>
+                        </button>
+                        <button class="dice__hold">
+                            <i class="fa-solid fa-bore-hole"></i>
+                            <span>hold</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <img src="./img/roll-dice.png" alt="roll-dice"> -->
+<script src="./js/app.js"></script>
+</body>
+
+</html>
+
+<!-- <i class="fa-solid fa-dice-one"></i>
+<i class="fa-solid fa-dice-two"></i>
+<i class="fa-solid fa-dice-three"></i>
+<i class="fa-solid fa-dice-four"></i>
+<i class="fa-solid fa-dice-five"></i>
+<i class="fa-solid fa-dice-six"></i> -->

@@ -1,0 +1,208 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+.dice__roll, .dice__new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.313rem, 0.112rem + 1vw, 0.625rem);
+  font-size: clamp(0.625rem, 0.225rem + 2vw, 1.25rem);
+  width: clamp(6.25rem, 4.25rem + 10vw, 10.75rem);
+  height: clamp(1.875rem, 0.915rem + 4.8vw, 3.375rem);
+  border-radius: 99px;
+  background-color: rgba(255, 255, 255, 0.6156862745);
+  cursor: pointer;
+}
+
+.dice__actions, .dice__btns, .dice .current__score, .dice__item-score, .dice__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #ffaaaa;
+  min-height: 100dvh;
+  color: #2f2f2f;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(0.625rem, -0.175rem + 4vw, 1.875rem);
+}
+
+.dice__items {
+  display: flex;
+  min-height: 100dvh;
+  padding: clamp(0.625rem, -0.175rem + 4vw, 1.875rem) 0;
+  position: relative;
+}
+.dice__item {
+  flex: 0 1 50%;
+  justify-content: space-between;
+  padding-top: clamp(3.375rem, 2.335rem + 5.2vw, 5rem);
+  padding-bottom: 40px;
+}
+.dice__items .dice__item:nth-child(1) {
+  background-color: #dcaeba;
+  border-radius: 10px 0px 0px 10px;
+}
+.dice__items .dice__item:nth-child(2) {
+  background-color: #bd7a94;
+  border-radius: 0px 10px 10px 0px;
+}
+.dice__item-score {
+  justify-content: center;
+  gap: 30px;
+}
+.dice__item-score h2 {
+  font-size: clamp(1.438rem, 0.357rem + 5.4vw, 3.125rem);
+  font-weight: 600;
+}
+.dice__item-score span {
+  font-size: clamp(1.625rem, -0.335rem + 9.8vw, 4.688rem);
+  font-weight: 400;
+  color: #b14444;
+}
+.dice .current__score {
+  justify-content: center;
+  gap: 20px;
+  background-color: #b14444;
+  width: clamp(5.625rem, 2.225rem + 17vw, 10.938rem);
+  height: clamp(5rem, 1.96rem + 15.2vw, 9.75rem);
+  color: #fff;
+  border-radius: 8px;
+}
+.dice .current__score h4 {
+  font-size: clamp(1rem, 0.44rem + 2.8vw, 1.875rem);
+  width: clamp(5rem, 4.4rem + 3vw, 5.938rem);
+  text-align: center;
+}
+.dice .current__score span {
+  font-size: clamp(1.125rem, -0.155rem + 6.4vw, 3.125rem);
+}
+.dice__btns {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  min-height: calc(100dvh - 60px);
+  padding-top: clamp(0.5rem, -1.18rem + 8.4vw, 3.125rem);
+  padding-bottom: clamp(1.875rem, -0.765rem + 13.2vw, 6rem);
+}
+.dice__result {
+  font-size: clamp(3.125rem, 1.125rem + 10vw, 6.25rem);
+  color: rgb(0, 0, 0);
+}
+.dice__actions {
+  gap: 45px;
+}
+.dice__new i {
+  color: green;
+}
+.dice__new span {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 0.43rem + 1.6vw, 1.25rem);
+  color: #1e1e1e;
+}
+.dice__roll span {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 0.43rem + 1.6vw, 1.25rem);
+  color: #1e1e1e;
+}
+.dice__roll img {
+  width: clamp(1.063rem, 0.943rem + 0.6vw, 1.25rem);
+  width: clamp(1.063rem, 0.943rem + 0.6vw, 1.25rem);
+}
+.dice__hold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.25rem, 0.01rem + 1.2vw, 0.625rem);
+  font-size: clamp(0.563rem, 0.123rem + 2.2vw, 1.25rem);
+  width: clamp(3.25rem, 0.13rem + 15.6vw, 8.125rem);
+  height: clamp(1.5rem, 0.3rem + 6vw, 3.375rem);
+  border-radius: 99px;
+  background-color: rgba(255, 255, 255, 0.6156862745);
+  cursor: pointer;
+}
+.dice__hold i {
+  color: green;
+}
+.dice__hold span {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.625rem, 0.225rem + 2vw, 1.25rem);
+  color: #1e1e1e;
+}
+.dice__btns button {
+  transition: 0.1s all ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+.dice__roll:active {
+  transform: translateY(5px);
+  scale: 0.99;
+}
+.dice__hold:active {
+  scale: 0.99;
+  transform: translateY(5px);
+}
+.dice__new:active {
+  transform: translateY(5px);
+  scale: 0.99;
+}
+.dice .disabled {
+  filter: blur(4px);
+}
+.dice .winner {
+  display: none;
+  font-size: clamp(1.125rem, 0.325rem + 4vw, 3.125rem);
+  font-weight: 600;
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
